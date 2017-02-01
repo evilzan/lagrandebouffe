@@ -33,3 +33,6 @@ var contenu = {
   ]
 }
 document.getElementById('titreSite').innerHTML=contenu.name;
+document.getElementById('accroche').innerHTML=contenu.name;
+document.getElementById('descriptif').innerHTML=contenu.description;
+document.getElementById('carte').innerHTML=contenu.baseline;
