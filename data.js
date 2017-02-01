@@ -36,3 +36,11 @@ document.getElementById('titreSite').innerHTML=contenu.name;
 document.getElementById('accroche').innerHTML=contenu.name;
 document.getElementById('descriptif').innerHTML=contenu.description;
 document.getElementById('carte').innerHTML=contenu.baseline;
+
+var contenuCarte = contenu.carte;
+document.getElementById('plat1Nom').innerHTML=contenuCarte[0].name;
+document.getElementById('plat2Nom').innerHTML=contenuCarte[1].name;
+document.getElementById('plat3nom').innerHTML=contenuCarte[2].name;
+document.getElementById('plat1Description').innerHTML=contenuCarte[0].description;
+document.getElementById('plat2Description').innerHTML=contenuCarte[1].description;
+document.getElementById('plat3Description').innerHTML=contenuCarte[2].description;
