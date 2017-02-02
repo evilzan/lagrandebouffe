@@ -38,19 +38,38 @@ var contenuCarteBoucle = document.getElementById('container2');
 var contenuCarte = contenu.carte;
 
 function creationPlat() {
-  console.log("contenu carte : " +contenuCarte);
     for (var i = 0; i < contenuCarte.length; i++) {
+        var ligne = document.createElement('div');
+        var colonneImage = document.createElement('div');
         var img = document.createElement('img');
+        var colonneContenu = document.createElement('div');
         var titre = document.createElement('h3');
         var descriptif = document.createElement('p');
 
+        ligne.classList.add("row");
+        colonneImage.classList.add("col-xs-12","col-sm-3");
         img.src = contenuCarte[i].image;
-        img.classList.add("imgp");
+        img.classList.add("imgp","img-responsive");
+        colonneContenu.classList.add("col-xs-12","col-sm-6");
         titre.innerHTML = contenuCarte[i].name;
         descriptif.innerHTML = contenuCarte[i].description;
-        contenuCarteBoucle.appendChild(img);
-        contenuCarteBoucle.appendChild(titre);
-        contenuCarteBoucle.appendChild(descriptif);
+
+        container2.appendChild(ligne);
+        ligne.appendChild(colonneImage);
+        ligne.appendChild(colonneContenu);
+        colonneImage.appendChild(img);
+        colonneContenu.appendChild(titre);
+        colonneContenu.appendChild(descriptif);
+
+
+
+
+
+
+
+
+        // contenuCarteBoucle.appendChild(img);
+
     }
 };
 creationPlat();
