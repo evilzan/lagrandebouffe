@@ -1,11 +1,10 @@
-
-.imgp{
-  margin-left: 20px;
+* {
+  padding: auto;
+  margin: auto;
 }
 
-
 header {
-    height: 15vh;
+    height: 12vh;
     color: white;
     background-color: #665f55;
     z-index: -1;
@@ -13,15 +12,14 @@ header {
     flex-direction: row-reverse;
 }
 
-/*nav ul{
-    float: left;
-    display: inline-block;
-    text-align: center;
-    align-items: center;
-}*/
-
-
 navbar {
     float: right;
+}
 
+.container-fluid {
+  margin-bottom: 30px;
+}
+
+iframe {
+  width: 80%;
 }

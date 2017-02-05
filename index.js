@@ -9,9 +9,10 @@ var contenu = {
         'http://scrat.hellocoton.fr/img/guide/recette-ma-salade-tiede-de-chou-kale-et-lentilles-patates-douces-et-saumon-fume-18911644.jpg'
     ],
     baseline: 'La promo7 vous régale',
-    addresse: '51, rue de Vincennes',
-    codePostale: '93100',
-    ville: 'Montreuil',
+    infosAdresse:'Venez nous rencontrer',
+    adresse: '51, rue de Vincennes',
+    localite: '93100 Montreuil',
+    carteGeo: 'Nous trouver',
     carte: [{
         name: 'Poulet aux morilles',
         image: 'http://www.epicurien.be/img/recettes-cuisines/20130928_poulet_morilles-500.jpg',
@@ -32,7 +33,7 @@ var contenu = {
 document.getElementById('titreSite').innerHTML = contenu.name;
 document.getElementById('accroche').innerHTML = contenu.name;
 document.getElementById('descriptif').innerHTML = contenu.description;
-// document.getElementById('carte').innerHTML = contenu.baseline;
+document.getElementById('nousSituer').innerHTML = contenu.carteGeo;
 
 var contenuCarteBoucle = document.getElementById('container2');
 var contenuCarte = contenu.carte;
@@ -49,8 +50,8 @@ function creationPlat() {
         ligne.classList.add("row");
         colonneImage.classList.add("col-xs-12","col-sm-3");
         img.src = contenuCarte[i].image;
-        img.classList.add("imgp","img-responsive");
-        colonneContenu.classList.add("col-xs-12","col-sm-6");
+        img.classList.add("img-responsive");
+        colonneContenu.classList.add("col-xs-12","col-sm-9");
         titre.innerHTML = contenuCarte[i].name;
         descriptif.innerHTML = contenuCarte[i].description;
 
@@ -60,23 +61,10 @@ function creationPlat() {
         colonneImage.appendChild(img);
         colonneContenu.appendChild(titre);
         colonneContenu.appendChild(descriptif);
-
-
-
-
-
-
-
-
-        // contenuCarteBoucle.appendChild(img);
-
     }
 };
 creationPlat();
-// var contenuCarte = contenu.carte;
-// document.getElementById('plat1Nom').innerHTML=contenuCarte[0].name;
-// document.getElementById('plat2Nom').innerHTML=contenuCarte[1].name;
-// document.getElementById('plat3nom').innerHTML=contenuCarte[2].name;
-// document.getElementById('plat1Description').innerHTML=contenuCarte[0].description;
-// document.getElementById('plat2Description').innerHTML=contenuCarte[1].description;
-// document.getElementById('plat3Description').innerHTML=contenuCarte[2].description;
+
+document.getElementById('titreAdresse').innerHTML = contenu.infosAdresse;
+document.getElementById('rue').innerHTML = contenu.adresse;
+document.getElementById('localite').innerHTML = contenu.localite;
