@@ -1,7 +1,7 @@
 
 var contenu = {
     name: 'La bonne bouffe',
-    description: 'Venez goûter nos plats préparés avec amours et bienveillance. Notre chef Gertrude viendra probablement vous serrer la main. Vous pourrez échanger avec cette passionnée de cuisine et repartir avec des conseils pour reproduire sa cuisine inimitable',
+    description: 'Venez goûter nos plats préparés avec amours et bienveillance. Notre chef Gertrude viendra probablement vous serrer la main. <br>Vous pourrez échanger avec cette passionnée de cuisine et repartir avec des conseils pour reproduire sa cuisine inimitable',
     images: [
         'https://media-cdn.tripadvisor.com/media/photo-s/02/1b/9a/bf/le-grande-bouffe.jpg',
         'http://www.epicurien.be/img/recettes-cuisines/20130928_poulet_morilles-500.jpg',
@@ -41,26 +41,34 @@ var contenuCarte = contenu.carte;
 function creationPlat() {
     for (var i = 0; i < contenuCarte.length; i++) {
         var ligne = document.createElement('div');
+        var ligneVide = document.createElement('div');
         var colonneImage = document.createElement('div');
+        var colonneVide = document.createElement('div');
         var img = document.createElement('img');
         var colonneContenu = document.createElement('div');
         var titre = document.createElement('h3');
         var descriptif = document.createElement('p');
 
-        ligne.classList.add("row");
-        colonneImage.classList.add("col-xs-12","col-sm-3");
+        ligne.classList.add("row","col-xs-12", "col-sm-12");
+        colonneImage.classList.add("col-xs-9","col-sm-3");
         img.src = contenuCarte[i].image;
-        img.classList.add("img-responsive");
-        colonneContenu.classList.add("col-xs-12","col-sm-9");
+        img.classList.add("img-responsive","habillageImage");
+        colonneVide.classList.add("col-xs-3","col-sm-3");
+        colonneContenu.classList.add("col-xs-12","col-sm-4");
         titre.innerHTML = contenuCarte[i].name;
         descriptif.innerHTML = contenuCarte[i].description;
+        ligneVide.classList.add("taille");
+
 
         container2.appendChild(ligne);
+        ligne.appendChild(colonneVide);
         ligne.appendChild(colonneImage);
         ligne.appendChild(colonneContenu);
+        ligne.appendChild(ligneVide);
         colonneImage.appendChild(img);
         colonneContenu.appendChild(titre);
         colonneContenu.appendChild(descriptif);
+
     }
 };
 creationPlat();

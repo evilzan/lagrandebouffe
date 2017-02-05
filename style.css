@@ -20,6 +20,26 @@ navbar {
   margin-bottom: 30px;
 }
 
+#presentation {
+  text-align: center;
+  width: 80%;
+  border: 1px solid black;
+  border-radius: 10px;
+  margin-top: 3%;
+  margin-bottom: 3%;
+}
+
+.habillageImage {
+  border-radius: 10px;
+}
+
+.taille {
+  margin-bottom: 18%;
+}
+.containerMap {
+  text-align: center;
+}
+
 iframe {
   width: 80%;
 }
